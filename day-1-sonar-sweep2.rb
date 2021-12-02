@@ -1,5 +1,3 @@
-require_relative 'day-1-puzzle-input'
-
 def count_increasing_decreasing(puzzle_input)
   index = 1
   increasing_count = 0
@@ -10,4 +8,5 @@ def count_increasing_decreasing(puzzle_input)
   p increasing_count
 end
 
+puzzle_input = File.open("puzzle_inputs/day-1.txt").readlines.map(&:to_i)
 count_increasing_decreasing(puzzle_input)
