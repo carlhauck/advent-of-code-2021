@@ -1,5 +1,5 @@
-@bingo_calls = File.read("puzzle_inputs/day-4-bingo-call.txt").split(",").map(&:to_i)
-@boards = File.read("puzzle_inputs/day-4-boards.txt").split("\n\n")
+@bingo_calls = File.open("puzzle_inputs/day-4.txt").readlines.first.split(",").map(&:to_i)
+@boards = File.read("puzzle_inputs/day-4.txt").split("\n\n").drop(1)
 @boards_array = []
 @winner = false
 @win_combos = [(0..4).to_a, (5..9).to_a, (10..14).to_a, (15..19).to_a, (20..24).to_a, [0,5,10,15,20], [1,6,11,16,21], [2,7,12,17,22], [3,8,13,18,23], [4,9,14,19,24]]
